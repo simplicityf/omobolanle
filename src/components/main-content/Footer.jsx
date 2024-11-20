@@ -16,9 +16,7 @@ import xIcon from "../../assets/Images/akar-icons_x-fill.png";
 import mailIcon from "../../assets/Images/iconoir_mail.png";
 import whatsappIcon from "../../assets/Images/whatsapp.png";
 import { IoChevronUpCircleOutline } from "react-icons/io5";
-import { animateScroll as scroll } from 'react-scroll';
-
-
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -117,7 +115,7 @@ const Footer = () => {
           size="lg"
           colorScheme="blue"
           shadow="xl"
-          onClick={() => scroll.scrollToBottom()}
+          onClick={() => scroll.scrollToTop()}
           aria-label="Scroll to top"
         />
       </Box>
