@@ -1,6 +1,6 @@
 import { Box, Flex, Button, Text, Image } from "@chakra-ui/react";
 import profilePicture from "../../assets/Images/profilePicture.png";
-// import exportIcon from "../../assets/Images/export.png";
+import exportIcon from "../../assets/Images/export.png";
 import { Link } from "react-scroll";
 
 export function Sidebar() {
@@ -18,7 +18,7 @@ export function Sidebar() {
       fontSize="14px"
       mt="16px"
       width="auto"
-      // rightIcon={<Image src={exportIcon} />}
+      rightIcon={<Image src={exportIcon} />}
     >
       {children}
     </Button>
