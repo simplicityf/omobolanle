@@ -20,7 +20,7 @@ import {
 import user from "../../assets/Images/user.png";
 import sms from "../../assets/Images/sms.png";
 import smsTracking from "../../assets/Images/sms-tracking.png";
-import exportIcon from "../../assets/Images/export.png";
+import exportIcon from "../../assets/Images/exportWhite.png";
 
 const GetInTouch = () => {
   const toast = useToast();
@@ -72,11 +72,15 @@ const GetInTouch = () => {
 
   return (
     <Box as="form" onSubmit={handleSubmit(onSubmit)} p={"10px"}>
-      <Heading size={"md"}>Get In Touch</Heading>
-      <Text mb={8}>Love to hear from you</Text>
+      <Heading size={"md"} fontWeight={"regular"} color={"#333333"}>
+        Get In Touch
+      </Heading>
+      <Text mb={8} color={"#8A8A8A"}>
+        Love to hear from you
+      </Text>
 
       <FormControl isInvalid={errors.name} mb={4}>
-        <FormLabel>Name</FormLabel>
+        <FormLabel fontWeight={"regular"}>Name</FormLabel>
         <InputGroup>
           <InputLeftElement>
             <Image src={user} alt="user icon" />
@@ -98,7 +102,7 @@ const GetInTouch = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.email} mb={4}>
-        <FormLabel>Email</FormLabel>
+        <FormLabel fontWeight={"regular"}>Email</FormLabel>
         <InputGroup>
           <InputLeftElement>
             <Image src={sms} alt="email icon" />
@@ -121,7 +125,7 @@ const GetInTouch = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.message} mb={4}>
-        <FormLabel>Message</FormLabel>
+        <FormLabel fontWeight={"regular"}>Message</FormLabel>
         <InputGroup>
           <InputLeftElement>
             <Image src={smsTracking} alt="message icon" />

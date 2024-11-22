@@ -36,6 +36,7 @@ const Footer = () => {
         <span>·</span>
         <Link href="#about">About</Link>
         <span>·</span>
+
         <Link href="#projects">Projects</Link>
       </Flex>
 
@@ -110,7 +111,7 @@ const Footer = () => {
         <IconButton
           icon={<IoChevronUpCircleOutline />}
           position="fixed"
-          bottom="4"
+          bottom="8"
           right={{ base: 4, md: 8 }}
           size="lg"
           colorScheme="blue"

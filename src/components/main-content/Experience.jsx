@@ -17,7 +17,7 @@ import todoApp from "../../assets/Images/todoApp.png";
 import decoration from "../../assets/Images/decoration.png";
 import finTrack from "../../assets/Images/finTrack.png";
 import oldPort from "../../assets/Images/oldPort.png";
-import resume from "../../../src/oluwasegunAdeniyiResume.pdf"
+import resume from "../../../src/oluwasegunAdeniyiResume.pdf";
 
 const Experience = () => {
   const ExperienceItem = ({
@@ -27,59 +27,76 @@ const Experience = () => {
     date,
     description,
     badges,
+    link,
   }) => (
-    <Flex
-      direction={{ base: "column", lg: "row" }}
-      mb="32px"
-      align="start"
-      gap="16px"
+    <Box
+      as="a"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      transition="all 0.3s ease"
+      _hover={{
+        transform: "scale(1.02)", // Slight scale up on hover
+        boxShadow: "0 4px 6px rgba(0,0,0,0.1)", // Subtle shadow on hover
+        textDecoration: "none", // Prevent underline on hover
+      }}
     >
-      {/* Image and Badges */}
-      <Box flexShrink={0} width={{ base: "100%", lg: "300px" }}>
-        <Image
-          src={image}
-          alt={company}
-          boxSize="100%"
-          objectFit="cover"
-          borderRadius="8px"
-        />
-        <Flex
-          mt={4}
-          justifyContent={{ base: "center", lg: "flex-start" }}
-          wrap="wrap"
-          gap="8px"
-        >
-          {badges.map((badge, index) => (
-            <Badge key={index} colorScheme={badge.colorScheme}>
-              {badge.label}
-            </Badge>
-          ))}
-        </Flex>
-      </Box>
-
-      {/* Details */}
-      <Box flex="1">
-        <Flex align="center" justifyContent="space-between" mb="8px">
-          <Text fontWeight="bold">
-            {title} · {company}
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        mb="32px"
+        align="start"
+        gap="16px"
+      >
+        {/* Image and Badges */}
+        <Box flexShrink={0} width={{ base: "100%", lg: "300px" }}>
+          <Image
+            src={image}
+            alt={company}
+            boxSize="100%"
+            objectFit="cover"
+            borderRadius="8px"
+          />
+          <Flex
+            mt={4}
+            justifyContent={{ base: "center", lg: "flex-start" }}
+            wrap="wrap"
+            gap="8px"
+          >
+            {badges.map((badge, index) => (
+              <Badge
+                key={index}
+                colorScheme={badge.colorScheme}
+                borderRadius={badge.borderRadius}
+              >
+                {badge.label}
+              </Badge>
+            ))}
+          </Flex>
+        </Box>
+        {/* Details */}
+        <Box flex="1">
+          <Flex align="center" justifyContent="space-between" mb="8px">
+            <Text fontWeight="400">
+              {title} · {company}
+            </Text>
+            <Image src={exportIcon} alt="Export" />
+          </Flex>
+          <Flex align="baseline" gap="8px" mb="8px">
+            <Text fontSize="sm" color="gray.400">
+              {date}
+            </Text>
+          </Flex>
+          <Text color="#8A8A8A" mb="8px">
+            {description}
           </Text>
-          <Image src={exportIcon} alt="Export" />
-        </Flex>
-        <Flex align="baseline" gap="8px" mb="8px">
-          <Text fontSize="sm" color="gray.500">
-            {date}
-          </Text>
-        </Flex>
-        <Text color="gray.600" mb="8px">
-          {description}
-        </Text>
-      </Box>
-    </Flex>
+        </Box>
+      </Flex>
+    </Box>
   );
 
   return (
     <Box borderRadius="8px" padding="16px">
-      <Heading size="md" mb="16px">
+      <Heading size="md" mb="16px" fontWeight={"regular"} color={"#333333"}>
         Experience
       </Heading>
 
@@ -91,11 +108,17 @@ const Experience = () => {
         date="March 2024 - Present"
         description="Spearheaded user-centric interface design, boosting user engagement by 20% through intuitive property search and listing interfaces. Conducted user research with 50+ participants, leading to 5 key UX improvements that increased average session duration by 30%."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          { label: "Figma", colorScheme: "gray", borderRadius: "full" },
+          { label: "User Research", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "User Interface",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
         ]}
+        link="https://ricamado.netlify.app/"
       />
+      <Divider mb={"32px"} />
 
       {/* Sidmach */}
       <ExperienceItem
@@ -105,36 +128,66 @@ const Experience = () => {
         date="Oct 2023 - July 2024"
         description="Collaborated with the developers to build responsive UI components using react.js."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
+          { label: "React.js", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "Redux",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
         ]}
+        link="https://sidmach.com/"
       />
+      <Divider mb={"32px"} />
 
       {/* HNG */}
       <ExperienceItem
         image={hngIntern}
         title="Frontend Developer"
         company="HNG"
-        date="March 2024 - Present"
+        date="March 2024 "
         description="HNG Internship is a fast-paced bootcamp for learning digital skills. Converted 15+ design mock-ups into fully functional, responsive web interfaces."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          {
+            label: "React.js",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
+          { label: "Next.js", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "Redux",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
         ]}
+        link="https://hng.tech/internship"
       />
 
-      <Button mt={4} variant="outline" gap={2} href={resume} as={"a"}>
+      <Button
+        mt={4}
+        variant="outline"
+        gap={2}
+        href={resume}
+        as={"a"}
+        fontWeight={"regular"}
+      >
         See Résumé
         <Image src={exportIcon} alt="resume" />
       </Button>
 
       <Divider my="32px" />
-
-      <Heading size="md" mb="16px">
-        Personal Projects
-      </Heading>
+      <Box id="projects" pt={{ base: 8, md: 8 }}>
+        {/* This will be inside the Experience component */}
+        <Heading
+          size="md"
+          mb="16px"
+          fontWeight={"regular"}
+          color={"#333333"}
+          id="projects"
+        >
+          Personal Projects
+        </Heading>
+      </Box>
 
       {/* Todo App */}
       <ExperienceItem
@@ -144,11 +197,18 @@ const Experience = () => {
         date="March 2024 - Present"
         description="Todo apps are common, but many users still struggle with task management and productivity. I focused on creating a more effective and user-friendly todo app."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          { label: "React.js", colorScheme: "gray", borderRadius: "full" },
+          { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "Firebase",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
         ]}
+        link="https://todosnoteapp.netlify.app/"
       />
+
+      <Divider mb={"32px"} />
 
       {/* Decoration */}
       <ExperienceItem
@@ -158,11 +218,17 @@ const Experience = () => {
         date="March 2024 - Present"
         description="Decoration is a sleek, user-centric e-commerce platform specializing in modern furniture and home decor. This project showcases a clean, minimalist design that puts the focus on beautifully crafted furniture pieces."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          { label: "Figma", colorScheme: "gray", borderRadius: "full" },
+          { label: "User Research", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "User Interface",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
         ]}
+        link="https://dribbble.com/shots/25229776-modern-furniture-decoration?new_shot_upload=true"
       />
+      <Divider mb={"32px"} />
 
       {/* FinTrack */}
       <ExperienceItem
@@ -172,11 +238,13 @@ const Experience = () => {
         date="March 2024 - Present"
         description="FinTrack is a user-friendly budget application designed to help individuals take control of their finances. This app offers a comprehensive suite of features to track income, expenses, and savings goals, all within an intuitive interface."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          { label: "Chakra UI", colorScheme: "gray" },
+          { label: "React.js", colorScheme: "gray" },
+          { label: "User Experience", colorScheme: "gray" },
         ]}
+        link="https://fintrackerapp.netlify.app/"
       />
+      <Divider mb={"32px"} />
 
       {/* Old Portfolio */}
       <ExperienceItem
@@ -186,32 +254,18 @@ const Experience = () => {
         date="March 2024 - Present"
         description="My earlier portfolio served as a solid foundation, showcasing my initial projects and skill growth, focusing on UI/UX design and frontend development."
         badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
+          { label: "Figma", colorScheme: "gray", borderRadius: "full" },
+          { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "React.js",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
         ]}
+        link="https://sgttwportfolio.netlify.app/"
       />
 
-      <Button mt={4} variant="outline" gap={2}>
-        View more projects
-        <Image src={exportIcon} alt="view more projects" />
-      </Button>
-
-      <Divider my="32px" />
-
-      {/* Pig Game
-      <ExperienceItem
-        image={projLum}
-        title="Frontend Development"
-        company="Pig Game"
-        date="March 2024 - Present"
-        description="Pig Game is an interactive two-player dice game built entirely with vanilla JavaScript, HTML, and CSS. This project showcases front-end development skills and the ability to implement complex game logic."
-        badges={[
-          { label: "Figma", colorScheme: "purple" },
-          { label: "User Research", colorScheme: "teal" },
-          { label: "User Interface", colorScheme: "orange" },
-        ]}
-      /> */}
+      <Divider m={"32px 0 0 0"} />
     </Box>
   );
 };

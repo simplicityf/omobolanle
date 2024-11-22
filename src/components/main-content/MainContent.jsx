@@ -18,6 +18,7 @@ export const MainContent = () => {
       </Box>
       <Box id="experience" pt={{ base: 6, md: 6 }}>
         <Experience />
+        
       </Box>
       <Box id="getintouch" pt={{ base: 8, md: 8 }}>
         <GetInTouch />

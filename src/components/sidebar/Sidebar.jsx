@@ -16,6 +16,7 @@ export function Sidebar() {
       colorScheme="gray"
       borderRadius="8px"
       fontSize="14px"
+      fontWeight={"regular"}
       mt="16px"
       width="auto"
       rightIcon={<Image src={exportIcon} />}
@@ -31,7 +32,7 @@ export function Sidebar() {
       </Box>
       <Box padding="4px 10px" mt="6px">
         <Text
-          fontWeight="400"
+          fontWeight="regular"
           fontSize={{ base: "20px", md: "24px" }}
           color="#333333"
         >
@@ -50,6 +51,7 @@ export function Sidebar() {
       </Box>
 
       <NavButton to="about">About</NavButton>
+
       <NavButton to="experience">Experience</NavButton>
       <NavButton to="getintouch">Get in Touch</NavButton>
     </Flex>
