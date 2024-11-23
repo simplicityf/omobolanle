@@ -17,7 +17,7 @@ import todoApp from "../../assets/Images/todoApp.png";
 import decoration from "../../assets/Images/decoration.png";
 import finTrack from "../../assets/Images/finTrack.png";
 import oldPort from "../../assets/Images/oldPort.png";
-import resume from "../../../src/oluwasegunAdeniyi.pdf";
+import resume from "../../../src/oluwasegunAdeniyiResume.pdf";
 
 const Experience = () => {
   const ExperienceItem = ({
