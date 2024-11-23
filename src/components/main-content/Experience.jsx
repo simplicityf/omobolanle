@@ -17,7 +17,7 @@ import todoApp from "../../assets/Images/todoApp.png";
 import decoration from "../../assets/Images/decoration.png";
 import finTrack from "../../assets/Images/finTrack.png";
 import oldPort from "../../assets/Images/oldPort.png";
-import resume from "../../../src/oluwasegunAdeniyiResume.pdf";
+import resume from "../../../src/oluwasegunAdeniyi.pdf";
 
 const Experience = () => {
   const ExperienceItem = ({
@@ -36,9 +36,9 @@ const Experience = () => {
       rel="noopener noreferrer"
       transition="all 0.3s ease"
       _hover={{
-        transform: "scale(1.02)", // Slight scale up on hover
-        boxShadow: "0 4px 6px rgba(0,0,0,0.1)", // Subtle shadow on hover
-        textDecoration: "none", // Prevent underline on hover
+        transform: "scale(1.02)",
+        boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+        textDecoration: "none",
       }}
     >
       <Flex
