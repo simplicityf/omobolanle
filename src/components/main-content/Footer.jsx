@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Flex,
   Link,
@@ -19,6 +19,17 @@ import { IoChevronUpCircleOutline } from "react-icons/io5";
 import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 300); // Show button after 300px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     // <Box as="footer" p={"10px"} bg="gray.50" mt={8}>
     <Box as="footer" p={"10px"} mt={8}>
@@ -83,7 +94,7 @@ const Footer = () => {
               aria-label="X (Twitter)"
             />
           </Link>
-          <Link href="https://mail.google.com/mail/u/0/">
+          <Link href="mailto:adeniyisegun025@gmail.com" isExternal>
             <IconButton
               icon={<Image src={mailIcon} alt="Mail" />}
               variant="ghost"
@@ -107,19 +118,21 @@ const Footer = () => {
         </Text>
       </VStack>
 
-      <Box position="relative">
-        <IconButton
-          icon={<IoChevronUpCircleOutline />}
-          position="fixed"
-          bottom="8"
-          right={{ base: 4, md: 8 }}
-          size="lg"
-          colorScheme="blue"
-          shadow="xl"
-          onClick={() => scroll.scrollToTop()}
-          aria-label="Scroll to top"
-        />
-      </Box>
+      {showScrollButton && (
+        <Box position="relative">
+          <IconButton
+            icon={<IoChevronUpCircleOutline />}
+            position="fixed"
+            bottom="8"
+            right={{ base: 4, md: 8 }}
+            size="lg"
+            colorScheme="blue"
+            shadow="xl"
+            onClick={() => scroll.scrollToTop()}
+            aria-label="Scroll to top"
+          />
+        </Box>
+      )}
     </Box>
   );
 };
