@@ -8,12 +8,13 @@ const About = () => {
         About
       </Heading>
       <Text color="#8A8A8A" mt={2} padding={"10px"}>
-        I am a passionate UI/UX Designer and Frontend Developer on a mission to
-        craft digital experiences that leave a lasting impression. With a love
-        for seamless design and clean code, I bring creativity and functionality
-        together to transform ideas into captivating realities. Let's build
-        something
-        <strong> extraordinary.</strong>
+        There’s something profoundly satisfying about taking an idea,
+        visualizing it, and then bringing it to life through code. While the
+        process can be challenging, the reward of seeing it come to fruition
+        makes every effort worthwhile. Whether I’m designing or developing, I
+        always consider the needs of the team and anyone who might work with it
+        in the future, ensuring clarity, functionality, and a seamless
+        experience for all.
       </Text>
       <Divider mt={"32px"} />
     </Box>
@@ -22,6 +23,6 @@ const About = () => {
 
 export default About;
 
-// There's something inherently satisfying about having an idea, visualizing that idea 
+// There's something inherently satisfying about having an idea, visualizing that idea
 // and then coding it.
-// It might be stressful but it's worth it 
+// It might be stressful but it's worth it
