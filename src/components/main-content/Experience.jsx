@@ -18,6 +18,8 @@ import decoration from "../../assets/Images/decoration.png";
 import finTrack from "../../assets/Images/finTrack.png";
 import oldPort from "../../assets/Images/oldPort.png";
 import resume from "../../../src/oluwasegunAdeniyiResume.pdf";
+import weather from "../../../src/assets/Images/weather.png";
+import blogPost from "../../../src/assets/Images/blogPost.png";
 
 const Experience = () => {
   const ExperienceItem = ({
@@ -194,7 +196,7 @@ const Experience = () => {
         image={todoApp}
         title="Frontend Development"
         company="Todo App"
-        date="March 2024 - Present"
+        date="Jan 2024 "
         description="Todo apps are common, but many users still struggle with task management and productivity. I focused on creating a more effective and user-friendly todo app."
         badges={[
           { label: "React.js", colorScheme: "gray", borderRadius: "full" },
@@ -215,7 +217,7 @@ const Experience = () => {
         image={decoration}
         title="UI/UX Designer"
         company="Decoration: Curated Contemporary Furniture"
-        date="March 2024 - Present"
+        date="March 2024 "
         description="Decoration is a sleek, user-centric e-commerce platform specializing in modern furniture and home decor. This project showcases a clean, minimalist design that puts the focus on beautifully crafted furniture pieces."
         badges={[
           { label: "Figma", colorScheme: "gray", borderRadius: "full" },
@@ -235,7 +237,7 @@ const Experience = () => {
         image={finTrack}
         title="Frontend Development · UI/UX Designer"
         company="FinTrack: Your personal finance companion"
-        date="March 2024 - Present"
+        date="April 2024 "
         description="FinTrack is a user-friendly budget application designed to help individuals take control of their finances. This app offers a comprehensive suite of features to track income, expenses, and savings goals, all within an intuitive interface."
         badges={[
           { label: "Chakra UI", colorScheme: "gray" },
@@ -246,12 +248,49 @@ const Experience = () => {
       />
       <Divider mb={"32px"} />
 
+      {/* Blog */}
+      <ExperienceItem
+        image={blogPost}
+        title="Frontend Development"
+        company="Blog management"
+        date="Dec 2024"
+        description="Streamline Your Stories – Effortless Blog Management Made Simple!"
+        badges={[
+          { label: "Tailwind CSS", colorScheme: "gray" },
+          { label: "React.js", colorScheme: "gray" },
+          { label: "Firebase", colorScheme: "gray" },
+        ]}
+        link="https://blog-management-app.netlify.app/"
+      />
+      <Divider mb={"32px"} />
+
+      {/* Weather App */}
+      <ExperienceItem
+        image={weather}
+        title="Frontend Development"
+        company="Weather App"
+        date="Dec 2024 "
+        description="Your Personal Weather Guide – Stay Ahead, Rain or Shine!"
+        badges={[
+          { label: "React.js", colorScheme: "gray", borderRadius: "full" },
+          { label: "Tailwind CSS", colorScheme: "gray", borderRadius: "full" },
+          {
+            label: "Firebase",
+            colorScheme: "gray",
+            borderRadius: "full",
+          },
+        ]}
+        link="https://weather-forecast-info-app.netlify.app/"
+      />
+
+      <Divider mb={"32px"} />
+
       {/* Old Portfolio */}
       <ExperienceItem
         image={oldPort}
         title="Frontend Development · UI/UX Designer"
         company="Old Portfolio"
-        date="March 2024 - Present"
+        date="March 2024"
         description="My earlier portfolio served as a solid foundation, showcasing my initial projects and skill growth, focusing on UI/UX design and frontend development."
         badges={[
           { label: "Figma", colorScheme: "gray", borderRadius: "full" },
