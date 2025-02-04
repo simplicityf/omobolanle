@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Text,
@@ -20,8 +20,15 @@ import oldPort from "../../assets/Images/oldPort.png";
 import resume from "../../../src/oluwasegunAdeniyiResume.pdf";
 import weather from "../../../src/assets/Images/weather.png";
 import blogPost from "../../../src/assets/Images/blogPost.png";
+import { IoChevronUpSharp, IoChevronDownSharp } from "react-icons/io5";
 
 const Experience = () => {
+  const [seeMoreProjects, setSeeMoreProjects] = useState(false);
+
+  const handleSeeMoreProjects = () => {
+    setSeeMoreProjects(!seeMoreProjects);
+  };
+
   const ExperienceItem = ({
     image,
     title,
@@ -262,49 +269,71 @@ const Experience = () => {
         ]}
         link="https://blog-management-app.netlify.app/"
       />
-      <Divider mb={"32px"} />
+      {/* <Divider mb={"32px"} /> */}
 
-      {/* Weather App */}
-      <ExperienceItem
-        image={weather}
-        title="Frontend Development"
-        company="Weather App"
-        date="Dec 2024 "
-        description="Your Personal Weather Guide – Stay Ahead, Rain or Shine!"
-        badges={[
-          { label: "React.js", colorScheme: "gray", borderRadius: "full" },
-          { label: "Tailwind CSS", colorScheme: "gray", borderRadius: "full" },
-          {
-            label: "Firebase",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
-        ]}
-        link="https://weather-forecast-info-app.netlify.app/"
-      />
+      {/* View more button */}
+      <Button
+        mt={4}
+        variant="outline"
+        gap={2}
+        onClick={handleSeeMoreProjects}
+        as={"a"}
+        fontWeight={"regular"}
+      >
+        {/* See More Projects */}
+        {seeMoreProjects ? "See Less Projects" : "See More Projects"}
+        {seeMoreProjects ? <IoChevronUpSharp /> : <IoChevronDownSharp />}
+      </Button>
+      <Divider my={"32px"} />
 
-      <Divider mb={"32px"} />
+      {seeMoreProjects && (
+        <>
+          {/* Weather App */}
+          <ExperienceItem
+            image={weather}
+            title="Frontend Development"
+            company="Weather App"
+            date="Dec 2024 "
+            description="Your Personal Weather Guide – Stay Ahead, Rain or Shine!"
+            badges={[
+              { label: "React.js", colorScheme: "gray", borderRadius: "full" },
+              {
+                label: "Tailwind CSS",
+                colorScheme: "gray",
+                borderRadius: "full",
+              },
+              {
+                label: "Firebase",
+                colorScheme: "gray",
+                borderRadius: "full",
+              },
+            ]}
+            link="https://weather-forecast-info-app.netlify.app/"
+          />
 
-      {/* Old Portfolio */}
-      <ExperienceItem
-        image={oldPort}
-        title="Frontend Development · UI/UX Designer"
-        company="Old Portfolio"
-        date="March 2024"
-        description="My earlier portfolio served as a solid foundation, showcasing my initial projects and skill growth, focusing on UI/UX design and frontend development."
-        badges={[
-          { label: "Figma", colorScheme: "gray", borderRadius: "full" },
-          { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
-          {
-            label: "React.js",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
-        ]}
-        link="https://sgttwportfolio.netlify.app/"
-      />
+          <Divider mb={"32px"} />
+          {/* Old Portfolio */}
+          <ExperienceItem
+            image={oldPort}
+            title="Frontend Development · UI/UX Designer"
+            company="Old Portfolio"
+            date="March 2024"
+            description="My earlier portfolio served as a solid foundation, showcasing my initial projects and skill growth, focusing on UI/UX design and frontend development."
+            badges={[
+              { label: "Figma", colorScheme: "gray", borderRadius: "full" },
+              { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
+              {
+                label: "React.js",
+                colorScheme: "gray",
+                borderRadius: "full",
+              },
+            ]}
+            link="https://sgttwportfolio.netlify.app/"
+          />
 
-      <Divider m={"32px 0 0 0"} />
+          <Divider m={"32px 0 0 0"} />
+        </>
+      )}
     </Box>
   );
 };

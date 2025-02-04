@@ -114,7 +114,7 @@ const Footer = () => {
       {/* Footer Text */}
       <VStack mt={4}>
         <Text fontSize="sm" color="gray.500" textAlign="center">
-          © 2024 Oluwasegun Adeniyi. All rights reserved.
+          © 2025 Oluwasegun Adeniyi. All rights reserved.
         </Text>
       </VStack>
 
