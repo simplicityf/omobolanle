@@ -9,7 +9,7 @@ import {
   Button,
   Divider,
 } from "@chakra-ui/react";
-import ricamado from "../../assets/Images/ricamado.png";
+import ricamado from "../../assets/Images/ricamado(2).png";
 import exportIcon from "../../assets/Images/export.png";
 import projLum from "../../assets/Images/projLum.png";
 import hngIntern from "../../assets/Images/hngIntern.png";
@@ -41,7 +41,7 @@ const Experience = () => {
     <Box
       as="a"
       href={link}
-      target="_blank"
+      target="_self"
       rel="noopener noreferrer"
       transition="all 0.3s ease"
       _hover={{
@@ -125,7 +125,7 @@ const Experience = () => {
             borderRadius: "full",
           },
         ]}
-        link="https://ricamado.netlify.app/"
+        link="https://ricamado.vercel.app/"
       />
       <Divider mb={"32px"} />
 
