@@ -10,20 +10,22 @@ import GetInTouch from "./components/main-content/GetInTouch";
 
 function App() {
   return (
-    <Router future={{ v7_relativeSplatPath: true }}>
-      <Flex direction={{ base: "column", md: "row", lg: "row" }}>
-        <Box display={{base: "none", md: "block"}}>
-          <ScrollToTop />
-        </Box>
-        <Sidebar />
-        <MainContent />
-      </Flex>
-      <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/getintouch" element={<GetInTouch />} />
-      </Routes>
-    </Router>
+    <Box bg="rgba(31, 8, 54)" minH="100vh" w="100%">
+      <Router future={{ v7_relativeSplatPath: true }}>
+        <Flex direction={{ base: "column", md: "row", lg: "row" }}>
+          <Box display={{ base: "none", md: "block" }}>
+            <ScrollToTop />
+          </Box>
+          <Sidebar />
+          <MainContent />
+        </Flex>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/getintouch" element={<GetInTouch />} />
+        </Routes>
+      </Router>
+    </Box>
   );
 }
 

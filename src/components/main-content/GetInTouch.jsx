@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
@@ -20,12 +21,11 @@ import {
 import user from "../../assets/Images/user.png";
 import sms from "../../assets/Images/sms.png";
 import smsTracking from "../../assets/Images/sms-tracking.png";
-import exportIcon from "../../assets/Images/exportWhite.png";
 
 const GetInTouch = () => {
   const toast = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [_submitSuccess, setSubmitSuccess] = useState(false);
 
   const {
     register,
@@ -37,7 +37,7 @@ const GetInTouch = () => {
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://formspree.io/f/mzzbvrdg", {
+      const response = await fetch("https://formspree.io/f/mblooqzg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,6 +64,7 @@ const GetInTouch = () => {
         status: "error",
         duration: 5000,
         isClosable: true,
+        error
       });
     } finally {
       setIsSubmitting(false);
@@ -72,15 +73,15 @@ const GetInTouch = () => {
 
   return (
     <Box as="form" onSubmit={handleSubmit(onSubmit)} p={"10px"}>
-      <Heading size={"md"} fontWeight={"regular"} color={"#333333"}>
+      <Heading size={"md"} fontWeight={"regular"} color={"gray.200"} mb={4}>
         Get In Touch
       </Heading>
-      <Text mb={8} color={"#8A8A8A"}>
+      <Text mb={8} color={"gray.200"}>
         Love to hear from you
       </Text>
 
       <FormControl isInvalid={errors.name} mb={4}>
-        <FormLabel fontWeight={"regular"}>Name</FormLabel>
+        <FormLabel fontWeight={"regular"} color={"gray.300"}>Name</FormLabel>
         <InputGroup>
           <InputLeftElement>
             <Image src={user} alt="user icon" />
@@ -94,6 +95,7 @@ const GetInTouch = () => {
               },
             })}
             placeholder="Your name"
+            color={"gray.200"}
           />
         </InputGroup>
         <FormErrorMessage>
@@ -102,7 +104,7 @@ const GetInTouch = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.email} mb={4}>
-        <FormLabel fontWeight={"regular"}>Email</FormLabel>
+        <FormLabel fontWeight={"regular"} color={"gray.300"}>Email</FormLabel>
         <InputGroup>
           <InputLeftElement>
             <Image src={sms} alt="email icon" />
@@ -117,6 +119,7 @@ const GetInTouch = () => {
             })}
             type="email"
             placeholder="Your email"
+            color={"gray.200"}
           />
         </InputGroup>
         <FormErrorMessage>
@@ -125,7 +128,7 @@ const GetInTouch = () => {
       </FormControl>
 
       <FormControl isInvalid={errors.message} mb={4}>
-        <FormLabel fontWeight={"regular"}>Message</FormLabel>
+        <FormLabel fontWeight={"regular"} color={"gray.300"}>Message</FormLabel>
         <InputGroup>
           <InputLeftElement>
             <Image src={smsTracking} alt="message icon" />
@@ -141,6 +144,7 @@ const GetInTouch = () => {
             placeholder="Your message"
             pl={10}
             rows={4}
+            color={"gray.200"}
           />
         </InputGroup>
         <FormErrorMessage>
@@ -159,7 +163,6 @@ const GetInTouch = () => {
         loadingText="Sending..."
       >
         Send Message
-        <Image src={exportIcon} alt="send icon" />
       </Button>
 
       <Divider my="32px" color="orange" />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
 import {
   Box,
   Text,
@@ -6,28 +6,18 @@ import {
   Badge,
   Flex,
   Image,
-  Button,
   Divider,
+  Icon
 } from "@chakra-ui/react";
-import ricamado from "../../assets/Images/ricamado(2).png";
-import exportIcon from "../../assets/Images/export.png";
+import bibuain from "../../assets/Images/bibuain.png";
+import { TbArrowUpRight } from "react-icons/tb";
 import projLum from "../../assets/Images/projLum.png";
 import hngIntern from "../../assets/Images/hngIntern.png";
-import todoApp from "../../assets/Images/todoApp.png";
-import decoration from "../../assets/Images/decoration.png";
-import finTrack from "../../assets/Images/finTrack.png";
-import oldPort from "../../assets/Images/oldPort.png";
-import resume from "../../../src/oluwasegunAdeniyiResume.pdf";
-import weather from "../../../src/assets/Images/weather.png";
-import blogPost from "../../../src/assets/Images/blogPost.png";
-import { IoChevronUpSharp, IoChevronDownSharp } from "react-icons/io5";
+import nft_homepage from "../../assets/Images/nft_homepage.png";
+import justblog_homepage from "../../assets/Images/justblog_homepage.png";
+import simply_homepage from "../../assets/Images/simply_homepage.png";
 
 const Experience = () => {
-  const [seeMoreProjects, setSeeMoreProjects] = useState(false);
-
-  const handleSeeMoreProjects = () => {
-    setSeeMoreProjects(!seeMoreProjects);
-  };
 
   const ExperienceItem = ({
     image,
@@ -44,6 +34,7 @@ const Experience = () => {
       target="_self"
       rel="noopener noreferrer"
       transition="all 0.3s ease"
+      color="rgb(250, 229, 229)"
       _hover={{
         transform: "scale(1.02)",
         boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
@@ -55,6 +46,7 @@ const Experience = () => {
         mb="32px"
         align="start"
         gap="16px"
+
       >
         {/* Image and Badges */}
         <Box flexShrink={0} width={{ base: "100%", lg: "300px" }}>
@@ -70,6 +62,7 @@ const Experience = () => {
             justifyContent={{ base: "center", lg: "flex-start" }}
             wrap="wrap"
             gap="8px"
+
           >
             {badges.map((badge, index) => (
               <Badge
@@ -82,20 +75,19 @@ const Experience = () => {
             ))}
           </Flex>
         </Box>
-        {/* Details */}
         <Box flex="1">
           <Flex align="center" justifyContent="space-between" mb="8px">
             <Text fontWeight="400">
               {title} · {company}
             </Text>
-            <Image src={exportIcon} alt="Export" />
+            <Icon as={TbArrowUpRight} boxSize={5} color="gray.300" />
           </Flex>
           <Flex align="baseline" gap="8px" mb="8px">
-            <Text fontSize="sm" color="gray.400">
+            <Text fontSize="sm" color="gray.300">
               {date}
             </Text>
           </Flex>
-          <Text color="#8A8A8A" mb="8px">
+          <Text color="rgb(250, 229, 229)" mb="8px">
             {description}
           </Text>
         </Box>
@@ -105,235 +97,147 @@ const Experience = () => {
 
   return (
     <Box borderRadius="8px" padding="16px">
-      <Heading size="md" mb="16px" fontWeight={"regular"} color={"#333333"}>
+      <Heading size="md" mb="16px" fontWeight={"regular"} color={"white"}>
         Experience
       </Heading>
 
       {/* Ricamado */}
       <ExperienceItem
-        image={ricamado}
-        title="UI/UX Designer"
-        company="Ricamado Unique Limited"
-        date="March 2024 - Present"
-        description="Spearheaded user-centric interface design, boosting user engagement by 20% through intuitive property search and listing interfaces. Conducted user research with 50+ participants, leading to 5 key UX improvements that increased average session duration by 30%."
+        image={bibuain}
+        title="Software Developer/Engineer"
+        company="Bibuain Unique"
+        date="March 2025 - Present"
+        description="Led development team for an enterprise-grade cryptocurrency trading platform supporting Bitcoin and USDT transactions. Orchestrated full-stack implementation with primary focus on backend architecture while contributing to frontend development. Integrated third-party APIs (Paxful, Noones, Binance) to enable seamless live trading operations.
+Engineered critical modules for real-time BTC/USDT exchange rate monitoring via Binance API, implementing automated trade assignment system with robust escalation protocols.
+Architected and deployed secure API authentication framework ensuring protected vendor account integration while maintaining regulatory compliance."
         badges={[
-          { label: "Figma", colorScheme: "gray", borderRadius: "full" },
-          { label: "User Research", colorScheme: "gray", borderRadius: "full" },
+          { label: "AWS App Runner", colorScheme: "blue", borderRadius: "full" },
+          { label: "AWS Amplify", colorScheme: "purple", borderRadius: "full" },
+          { label: "GitHub Actions", colorScheme: "gray", borderRadius: "full" },
+          { label: "Supabase", colorScheme: "green", borderRadius: "full" },
+          { label: "Node/Typscript", colorScheme: "green", borderRadius: "full" },
           {
-            label: "User Interface",
+            label: "React/Typescript",
             colorScheme: "gray",
             borderRadius: "full",
           },
         ]}
-        link="https://ricamado.vercel.app/"
       />
-      <Divider mb={"32px"} />
+      <Divider mb="32px" borderColor="rgb(214, 154, 244)" />
 
-      {/* Sidmach */}
       <ExperienceItem
         image={projLum}
-        title="Frontend Developer"
-        company="Sidmach Technologies"
-        date="Oct 2023 - July 2024"
-        description="Collaborated with the developers to build responsive UI components using react.js."
+        title="Backend Developer"
+        company="Contract"
+        date="March 2025"
+        description="Architected and implemented proprietary authentication system for enterprise greenfield application, ensuring robust security standards and flexible user management.
+Spearheaded migration from monolithic architecture to modular API-first design using Django REST Framework, enabling improved scalability and third-party integrations.
+Engineered significant system optimization, reducing codebase complexity by 40% while enhancing maintainability, testability, and developer onboarding efficiency."
         badges={[
-          { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
-          { label: "React.js", colorScheme: "gray", borderRadius: "full" },
-          {
-            label: "Redux",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
+          { label: "Django REST Framework", colorScheme: "green", borderRadius: "full" },
+          { label: "Django Database", colorScheme: "green", borderRadius: "full" }
         ]}
-        link="https://sidmach.com/"
-      />
-      <Divider mb={"32px"} />
 
-      {/* HNG */}
+      />
+      <Divider mb="32px" borderColor="rgb(214, 154, 244)" />
+
       <ExperienceItem
         image={hngIntern}
-        title="Frontend Developer"
-        company="HNG"
-        date="March 2024 "
-        description="HNG Internship is a fast-paced bootcamp for learning digital skills. Converted 15+ design mock-ups into fully functional, responsive web interfaces."
+        title="Backend Engineer"
+        company="HNG Internship"
+        date="January 2025 - March 2025"
+        description={`
+Strategic Backend Engineer with specialized focus on API development and system architecture. Led multiple cross-functional projects delivering robust technical solutions.
+
+Key Projects:
+
+• Outbound AI — Engineered critical backend endpoints enabling user profile management and enterprise campaign orchestration. Collaborated across technical teams to enhance system reliability and service uptime.
+
+• Open Source Contribution — Implemented critical functionality for blog engagement metrics, resolving community issues while maintaining industry best practices for database operations and version control.
+
+• Performance Monitoring Solution — Architected comprehensive application monitoring system tracking latency and resource utilization with automated alert configuration. Deployed production-ready solution to cloud platform.
+
+• Infrastructure Optimization — Established enterprise-grade CI/CD pipeline achieving 99.9% deployment reliability. Implemented NGINX reverse proxy configuration reducing response times to 200ms.
+  `}
         badges={[
-          {
-            label: "React.js",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
-          { label: "Next.js", colorScheme: "gray", borderRadius: "full" },
-          {
-            label: "Redux",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
+          { label: "FastAPI", colorScheme: "blue", borderRadius: "full" },
+          { label: "PostgreSQL", colorScheme: "blue", borderRadius: "full" },
+          { label: "Docker", colorScheme: "blue", borderRadius: "full" },
+          { label: "GitHub Actions", colorScheme: "blue", borderRadius: "full" },
+          { label: "Flask", colorScheme: "green", borderRadius: "full" },
+          { label: "AWS EC2", colorScheme: "orange", borderRadius: "full" },
+          { label: "NGINX", colorScheme: "purple", borderRadius: "full" },
         ]}
         link="https://hng.tech/internship"
       />
 
-      <Button
-        mt={4}
-        variant="outline"
-        gap={2}
-        href={resume}
-        as={"a"}
-        fontWeight={"regular"}
-      >
-        See Résumé
-        <Image src={exportIcon} alt="resume" />
-      </Button>
+      <Divider mb="32px" borderColor="rgb(214, 154, 244)" />
 
-      <Divider my="32px" />
       <Box id="projects" pt={{ base: 8, md: 8 }}>
-        {/* This will be inside the Experience component */}
+
         <Heading
           size="md"
           mb="16px"
           fontWeight={"regular"}
-          color={"#333333"}
+          color="white"
           id="projects"
         >
           Personal Projects
         </Heading>
       </Box>
 
-      {/* Todo App */}
+
       <ExperienceItem
-        image={todoApp}
-        title="Frontend Development"
-        company="Todo App"
-        date="Jan 2024 "
-        description="Todo apps are common, but many users still struggle with task management and productivity. I focused on creating a more effective and user-friendly todo app."
+        image={nft_homepage}
+        title="Blockchain Developer"
+        date="November 2024"
+        description="Decentralized marketplace built on Sepolia testnet enabling direct artist-to-collector NFT transactions. Implemented smart contract integration and wallet connectivity for seamless token minting and management while eliminating intermediary fees."
         badges={[
-          { label: "React.js", colorScheme: "gray", borderRadius: "full" },
-          { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
-          {
-            label: "Firebase",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
+          { label: "Solidity", colorScheme: "purple", borderRadius: "full" },
+          { label: "Ethereum", colorScheme: "blue", borderRadius: "full" },
+          { label: "Web3.js", colorScheme: "green", borderRadius: "full" },
+          { label: "React", colorScheme: "teal", borderRadius: "full" },
+          { label: "Pinata", colorScheme: "gray", borderRadius: "full" },
         ]}
-        link="https://todosnoteapp.netlify.app/"
       />
 
-      <Divider mb={"32px"} />
+      <Divider mb="32px" borderColor="rgb(214, 154, 244)" />
 
-      {/* Decoration */}
+
       <ExperienceItem
-        image={decoration}
-        title="UI/UX Designer"
-        company="Decoration: Curated Contemporary Furniture"
-        date="March 2024 "
-        description="Decoration is a sleek, user-centric e-commerce platform specializing in modern furniture and home decor. This project showcases a clean, minimalist design that puts the focus on beautifully crafted furniture pieces."
+        image={justblog_homepage}
+        title="Full stack Engineer"
+        date="October 2024"
+        description="Feature-rich content management platform with robust authentication, role-based permissions, and media handling. Architected with scalability in mind, incorporating third-party integrations for enhanced security, analytics, and performance optimization."
         badges={[
-          { label: "Figma", colorScheme: "gray", borderRadius: "full" },
-          { label: "User Research", colorScheme: "gray", borderRadius: "full" },
-          {
-            label: "User Interface",
-            colorScheme: "gray",
-            borderRadius: "full",
-          },
+          { label: "Node.js", colorScheme: "green", borderRadius: "full" },
+          { label: "MongoDB", colorScheme: "green", borderRadius: "full" },
+          { label: "Express", colorScheme: "blue", borderRadius: "full" },
+          { label: "JWT", colorScheme: "red", borderRadius: "full" }
         ]}
-        link="https://dribbble.com/shots/25229776-modern-furniture-decoration?new_shot_upload=true"
-      />
-      <Divider mb={"32px"} />
 
-      {/* FinTrack */}
+      />
+      <Divider mb="32px" borderColor="rgb(214, 154, 244)" />
+
+
+
+
       <ExperienceItem
-        image={finTrack}
-        title="Frontend Development · UI/UX Designer"
-        company="FinTrack: Your personal finance companion"
-        date="April 2024 "
-        description="FinTrack is a user-friendly budget application designed to help individuals take control of their finances. This app offers a comprehensive suite of features to track income, expenses, and savings goals, all within an intuitive interface."
+        image={simply_homepage}
+        title="Backend Engineer"
+        date="January 2025"
+        description="Subscription-based learning management system with tiered access control and intuitive course delivery. Implemented payment processing, content protection, and user progression tracking while maintaining enterprise-grade security and scalability standards."
         badges={[
-          { label: "Chakra UI", colorScheme: "gray" },
-          { label: "React.js", colorScheme: "gray" },
-          { label: "User Experience", colorScheme: "gray" },
+          { label: "Python", colorScheme: "blue", borderRadius: "full" },
+          { label: "Django", colorScheme: "green", borderRadius: "full" },
+          { label: "PostgreSQL", colorScheme: "blue", borderRadius: "full" },
+          { label: "Stripe", colorScheme: "purple", borderRadius: "full" },
+          { label: "Neon", colorScheme: "purple", borderRadius: "full" }
         ]}
-        link="https://fintrackerapp.netlify.app/"
       />
-      <Divider mb={"32px"} />
+      <Divider borderColor="rgb(214, 154, 244)" />
 
-      {/* Blog */}
-      <ExperienceItem
-        image={blogPost}
-        title="Frontend Development"
-        company="Blog management"
-        date="Dec 2024"
-        description="Streamline Your Stories – Effortless Blog Management Made Simple!"
-        badges={[
-          { label: "Tailwind CSS", colorScheme: "gray" },
-          { label: "React.js", colorScheme: "gray" },
-          { label: "Firebase", colorScheme: "gray" },
-        ]}
-        link="https://blog-management-app.netlify.app/"
-      />
-      {/* <Divider mb={"32px"} /> */}
 
-      {/* View more button */}
-      <Button
-        mt={4}
-        variant="outline"
-        gap={2}
-        onClick={handleSeeMoreProjects}
-        as={"a"}
-        fontWeight={"regular"}
-      >
-        {/* See More Projects */}
-        {seeMoreProjects ? "See Less Projects" : "See More Projects"}
-        {seeMoreProjects ? <IoChevronUpSharp /> : <IoChevronDownSharp />}
-      </Button>
-      <Divider my={"32px"} />
-
-      {seeMoreProjects && (
-        <>
-          {/* Weather App */}
-          <ExperienceItem
-            image={weather}
-            title="Frontend Development"
-            company="Weather App"
-            date="Dec 2024 "
-            description="Your Personal Weather Guide – Stay Ahead, Rain or Shine!"
-            badges={[
-              { label: "React.js", colorScheme: "gray", borderRadius: "full" },
-              {
-                label: "Tailwind CSS",
-                colorScheme: "gray",
-                borderRadius: "full",
-              },
-              {
-                label: "Firebase",
-                colorScheme: "gray",
-                borderRadius: "full",
-              },
-            ]}
-            link="https://weather-forecast-info-app.netlify.app/"
-          />
-
-          <Divider mb={"32px"} />
-          {/* Old Portfolio */}
-          <ExperienceItem
-            image={oldPort}
-            title="Frontend Development · UI/UX Designer"
-            company="Old Portfolio"
-            date="March 2024"
-            description="My earlier portfolio served as a solid foundation, showcasing my initial projects and skill growth, focusing on UI/UX design and frontend development."
-            badges={[
-              { label: "Figma", colorScheme: "gray", borderRadius: "full" },
-              { label: "Chakra UI", colorScheme: "gray", borderRadius: "full" },
-              {
-                label: "React.js",
-                colorScheme: "gray",
-                borderRadius: "full",
-              },
-            ]}
-            link="https://sgttwportfolio.netlify.app/"
-          />
-
-          <Divider m={"32px 0 0 0"} />
-        </>
-      )}
     </Box>
   );
 };

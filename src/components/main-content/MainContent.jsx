@@ -12,6 +12,7 @@ export const MainContent = () => {
       width="auto"
       overflowY="auto"
       flex="1"
+      bg="transparent"
     >
       <Box id="about" pt={{ base: 6, md: 6 }}>
         <About />

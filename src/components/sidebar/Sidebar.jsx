@@ -1,7 +1,9 @@
-import { Box, Flex, Button, Text, Image } from "@chakra-ui/react";
+/* eslint-disable react/prop-types */
+import { Box, Flex, Button, Text, Image, Icon } from "@chakra-ui/react";
 import profilePicture from "../../assets/Images/profilePicture.png";
-import exportIcon from "../../assets/Images/export.png";
+import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-scroll";
+import Socials from "../main-content/socials";
 
 export function Sidebar() {
   const NavButton = ({ to, children }) => (
@@ -19,7 +21,13 @@ export function Sidebar() {
       fontWeight={"regular"}
       mt="16px"
       width="auto"
-      rightIcon={<Image src={exportIcon} />}
+      rightIcon={<Icon as={FiExternalLink} color="white" />}
+      color="white"
+      _hover={{
+        bg: "white",
+        color: "gray.900",
+        borderColor: "white",
+      }}
     >
       {children}
     </Button>
@@ -27,35 +35,47 @@ export function Sidebar() {
 
   const SidebarContent = () => (
     <Flex direction="column" align="center" w="full">
-      <Box>
-        <Image src={profilePicture} alt="profile picture" mb="4px" mt="16px" />
+      <Box
+        borderRadius="full"
+        p="2"
+        mt="16px"
+      >
+        <Image
+  src={profilePicture}
+  alt="profile picture"
+  boxSize="164px"
+  borderRadius="full"
+  objectFit="cover"
+  objectPosition="center"
+  transform="scale(1.2)" 
+/>
       </Box>
       <Box padding="4px 10px" mt="6px">
         <Text
           fontWeight="regular"
           fontSize={{ base: "20px", md: "24px" }}
-          color="#333333"
+          color="white"
         >
-          Oluwasegun Adeniyi
+          Azeezat Omobolanle Nasir
         </Text>
       </Box>
       <Box mt="20px" padding="4px 10px">
         <Text
           fontSize={{ base: "20px", md: "24px" }}
-          color="#333333"
+          color="white"
           textAlign="center"
           fontWeight="light"
         >
-          UI/UX Designer <br /> Frontend Developer
+          Software Developer/Engineer
         </Text>
       </Box>
-
-      <NavButton to="about">About</NavButton>
-
+  
       <NavButton to="experience">Experience</NavButton>
       <NavButton to="getintouch">Get in Touch</NavButton>
+      <Socials/>
     </Flex>
   );
+  
 
   return (
     <Box
@@ -70,8 +90,8 @@ export function Sidebar() {
       <Flex
         display="flex"
         alignItems="center"
-        bg="#fff"
-        border="1px solid #E6E6E6"
+        bg="rgba(31, 8, 54, 0.87)"
+        border="1px solid rgb(214, 154, 244)"
         borderRadius="8px"
         direction="column"
         height="calc(100vh - 60px)"
