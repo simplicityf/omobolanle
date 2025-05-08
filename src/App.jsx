@@ -22,7 +22,7 @@ function App() {
   const isProfileImagePage = location.pathname === "/profile-image";
 
   return (
-    <Box bg="rgba(31, 8, 54)" minH="100vh" w="100%">
+    <Box bg="rgba(4, 4, 4)" minH="100vh" w="100%">
       {isProfileImagePage ? (
         // Only show the image page content
         <Routes>

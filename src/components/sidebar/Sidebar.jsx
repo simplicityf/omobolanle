@@ -100,8 +100,8 @@ export function Sidebar() {
       <Flex
         display="flex"
         alignItems="center"
-        bg="rgba(31, 8, 54, 0.87)"
-        border="1px solid rgb(214, 154, 244)"
+        bg="rgba(4, 4, 4, 0.87)"
+        border="1px solid rgb(16, 15, 17)"
         borderRadius="8px"
         direction="column"
         height="calc(100vh - 60px)"
