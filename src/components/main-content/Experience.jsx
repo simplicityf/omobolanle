@@ -171,7 +171,7 @@ Key Projects:
         link="https://hng.tech/internship"
       />
 
-      <Divider mb="32px" borderColor="rgb(214, 154, 244)" />
+      <Divider mb="12px" borderColor="rgb(214, 154, 244)" />
 
       <Box id="projects" pt={{ base: 8, md: 8 }}>
 

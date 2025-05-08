@@ -4,8 +4,10 @@ import profilePicture from "../../assets/Images/profilePicture.png";
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-scroll";
 import Socials from "../main-content/socials";
+import { Link as RouterLink } from "react-router-dom";
 
 export function Sidebar() {
+
   const NavButton = ({ to, children }) => (
     <Button
       as={Link}
@@ -34,21 +36,29 @@ export function Sidebar() {
   );
 
   const SidebarContent = () => (
+
+    
     <Flex direction="column" align="center" w="full">
       <Box
         borderRadius="full"
         p="2"
         mt="16px"
       >
-        <Image
-  src={profilePicture}
-  alt="profile picture"
-  boxSize="164px"
-  borderRadius="full"
-  objectFit="cover"
-  objectPosition="center"
-  transform="scale(1.2)" 
-/>
+      <Box borderRadius="full" p="2" mt="16px">
+  <RouterLink to="/profile-image">
+    <Image
+      src={profilePicture}
+      alt="profile picture"
+      boxSize="164px"
+      borderRadius="full"
+      objectFit="cover"
+      objectPosition="center"
+      transform="scale(1.2)"
+      cursor="pointer"
+    />
+  </RouterLink>
+</Box>
+
       </Box>
       <Box padding="4px 10px" mt="6px">
         <Text

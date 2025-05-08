@@ -18,7 +18,7 @@ const About = () => {
         />
       </Text>
 
-      <Divider my="32px" borderColor="rgb(214, 154, 244)" />
+      <Divider mt="32px" borderColor="rgb(214, 154, 244)" />
     </Box>
   );
 };

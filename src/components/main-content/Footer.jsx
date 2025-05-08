@@ -53,8 +53,6 @@ const Footer = () => {
         gap={4}
         mt={8}
       >
-        {/* Logo */}
-       
 
         {/* Social Media Icons */}
         <Flex
