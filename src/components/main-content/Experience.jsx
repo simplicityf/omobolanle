@@ -59,7 +59,7 @@ const Experience = () => {
           />
           <Flex
             mt={4}
-            justifyContent={{ base: "center", lg: "flex-start" }}
+            justifyContent={{ base: "left", lg: "flex-start" }}
             wrap="wrap"
             gap="8px"
 
@@ -69,6 +69,8 @@ const Experience = () => {
                 key={index}
                 colorScheme={badge.colorScheme}
                 borderRadius={badge.borderRadius}
+                px={3}
+                py={1}
               >
                 {badge.label}
               </Badge>
@@ -111,7 +113,7 @@ const Experience = () => {
 Engineered critical modules for real-time BTC/USDT exchange rate monitoring via Binance API, implementing automated trade assignment system with robust escalation protocols.
 Architected and deployed secure API authentication framework ensuring protected vendor account integration while maintaining regulatory compliance."
         badges={[
-          { label: "AWS App Runner", colorScheme: "blue", borderRadius: "full" },
+          { label: "AWS App Runner", colorScheme: "blue", borderRadius: "full"},
           { label: "AWS Amplify", colorScheme: "purple", borderRadius: "full" },
           { label: "GitHub Actions", colorScheme: "gray", borderRadius: "full" },
           { label: "Supabase", colorScheme: "green", borderRadius: "full" },
