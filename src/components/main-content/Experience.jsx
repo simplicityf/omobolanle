@@ -18,7 +18,7 @@ import hngIntern from "../../assets/Images/hngIntern.png";
 import nft_homepage from "../../assets/Images/nft_homepage.png";
 import justblog_homepage from "../../assets/Images/justblog_homepage.png";
 import simply_homepage from "../../assets/Images/simply_homepage.png";
-import scent10 from "../../assets/Images/scent10.png"
+import scent10 from "../../assets/Images/scent10.PNG"
 import getwater from "../../assets/Images/getwater.png"
 
 const Experience = () => {
