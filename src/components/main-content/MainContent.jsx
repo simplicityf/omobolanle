@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import About from "./About";
 import Experience from "./Experience";
+import Credentials from "./Credentials";
 import GetInTouch from "./GetInTouch";
 import Footer from "./Footer";
 
@@ -19,7 +20,10 @@ export const MainContent = () => {
       </Box>
       <Box id="experience" pt={{ base: 6, md: 6 }}>
         <Experience />
-        
+
+      </Box>
+      <Box id="skills" pt={{ base: 8, md: 8 }}>
+        <Credentials />
       </Box>
       <Box id="getintouch" pt={{ base: 8, md: 8 }}>
         <GetInTouch />

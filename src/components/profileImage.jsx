@@ -1,5 +1,5 @@
 import { Image, Box } from "@chakra-ui/react";
-import profilePicture from "../assets/Images/profilePicture.png";
+import profilePicture from "../assets/Images/Omobolanle.jpg";
 
 export default function ProfileImage() {
     return (

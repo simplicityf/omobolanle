@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Box, Flex, Button, Text, Image, Icon } from "@chakra-ui/react";
-import profilePicture from "../../assets/Images/profilePicture.png";
+import profilePicture from "../../assets/Images/Omobolanle.jpg";
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-scroll";
 import Socials from "../main-content/socials";
@@ -52,8 +52,7 @@ export function Sidebar() {
       boxSize="164px"
       borderRadius="full"
       objectFit="cover"
-      objectPosition="center"
-      transform="scale(1.2)"
+      objectPosition="top"
       cursor="pointer"
     />
   </RouterLink>
@@ -81,6 +80,7 @@ export function Sidebar() {
       </Box>
   
       <NavButton to="experience">Experience</NavButton>
+      <NavButton to="skills">Skills</NavButton>
       <NavButton to="getintouch">Get in Touch</NavButton>
       <Socials/>
     </Flex>
