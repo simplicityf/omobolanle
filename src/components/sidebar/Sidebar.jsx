@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Box, Flex, Button, Text, Image, Icon } from "@chakra-ui/react";
 import profilePicture from "../../assets/Images/Omobolanle.jpg";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 import Socials from "../main-content/socials";
 import { Link as RouterLink } from "react-router-dom";
+import resume from "../../assets/Azeezat_Nasir_Resume.docx.pdf";
 
 export function Sidebar() {
 
@@ -79,6 +80,23 @@ export function Sidebar() {
         </Text>
       </Box>
   
+      <Button
+        as="a"
+        href={resume}
+        download="Azeezat_Nasir_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        colorScheme="purple"
+        borderRadius="8px"
+        fontSize="14px"
+        fontWeight="regular"
+        mt="16px"
+        width="auto"
+        rightIcon={<Icon as={FiDownload} />}
+      >
+        Download Resume
+      </Button>
+
       <NavButton to="experience">Experience</NavButton>
       <NavButton to="skills">Skills</NavButton>
       <NavButton to="getintouch">Get in Touch</NavButton>

@@ -34,7 +34,7 @@ const Socials = () => {
                     </Link>
 
 
-                    <Link href="www.linkedin.com/in/omobolanlehazeezat">
+                    <Link href="https://www.linkedin.com/in/omobolanlehazeezat" isExternal>
                         <IconButton
                             icon={<FaLinkedin />}
                             color="white"
