@@ -324,7 +324,7 @@ const Experience = () => {
       <ExperienceItem
         image={projLum}
         title="Backend Developer"
-        date="Contract"
+        date="May 2024 - November 2024 (Contract)"
         bullets={[
           "Architected and implemented a proprietary authentication system for an enterprise greenfield application, ensuring robust security standards and flexible user management.",
           "Spearheaded migration from a monolithic architecture to a modular, API-first design using Django REST Framework, enabling improved scalability and third-party integrations.",
@@ -350,7 +350,7 @@ const Experience = () => {
         image={scent10}
         title="Full stack Engineer"
         company="Sent By Anike"
-        date="Contract"
+        date="Febuary 2024 - July 2024 (Contract)"
         bullets={[
           "Developed a full-stack e-commerce platform for perfume retail with end-to-end order management.",
           "Built customer-facing features including product browsing, shopping cart, checkout, and real-time order tracking.",

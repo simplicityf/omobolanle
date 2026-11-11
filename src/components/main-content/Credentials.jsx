@@ -9,6 +9,8 @@ const skillGroups = [
     category: "Backend & APIs",
     skills: [
       "Node.js",
+      "Nest.js",
+      "GO",
       "Express",
       "FastAPI",
       "Django REST Framework",
@@ -19,16 +21,21 @@ const skillGroups = [
   },
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "Chakra UI", "Tailwind CSS"],
+    skills: ["React.js", "Next.js", "Chakra UI", "Tailwind CSS"],
   },
   {
     category: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Neon"],
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Neon", "AWS"],
+  },
+  {
+    category: "Storage",
+    skills: ["Neon Object Storage", "AWSS3", "Pinata"],
   },
   {
     category: "Infrastructure & Cloud",
     skills: [
-      "AWS (App Runner, Amplify)",
+      "AWS (App Runner, Amplify, EC2)",
+      "Google Cloud",
       "Docker",
       "Kafka",
       "GitHub Actions",
