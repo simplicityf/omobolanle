@@ -5,7 +5,7 @@ import { FiExternalLink, FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 import Socials from "../main-content/socials";
 import { Link as RouterLink } from "react-router-dom";
-import resume from "../../assets/Azeezat_Nasir_Resume.pdf";
+import resume from "../../assets/Azeezat_Nasir_Resume.PDF";
 
 export function Sidebar() {
 
