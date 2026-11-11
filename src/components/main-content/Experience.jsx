@@ -116,7 +116,7 @@ const Experience = () => {
         image={fastbuka}
         title="Mid-level Software Engineer"
         company="Choppaddi"
-        date="October 2025 - Present"
+        date="October 2025 - November 2026"
         bullets={[
           "Contributed to a comprehensive full-stack food delivery ecosystem spanning customer-facing apps, rider management, vendor portals, and CMS administration.",
           "Implemented server-side architecture with RESTful APIs and real-time integration for order tracking, authentication flows, dynamic menu management, and multi-vendor coordination.",
@@ -274,19 +274,27 @@ const Experience = () => {
 
       <ExperienceItem
         image={getwater}
-        title="Lead Software Engineer"
+        title="Co-founder & CTO"
         company="Driink Water"
-        // date="Contract"
+        date="Jan 2025 - present"
         bullets={[
-          "Developed and deployed a scalable backend system for a water utility application, designing secure database configurations across multiple environments.",
-          "Implemented role-based access control and authentication mechanisms to ensure data security and proper user permissions.",
-          "Established automated deployment pipelines to streamline release cycles and maintain system reliability.",
-          "Created thorough API documentation to facilitate future maintenance and integration efforts.",
+          "driinkwater is a water delivery marketplace that connects customers with trusted water vendors.",
+          "Designed and built the backend and database architecture, including role-based access control for admins, vendors, and customers",
+          "Implemented platform security, including vendor KYC/KYB verification",
+          "Integrated Paystack with split payments so vendors are paid automatically and the service fee is deducted per transaction",
+          "Integrated AI to power customer support and other in-app assistance",
+          "Built the web app with Next.js, Tailwind CSS, Node.js/Express, and PostgreSQL",
+          "Led the product from build through launch"
         ]}
         badges={[
           {
             label: "NodeJS/Javascript",
             colorScheme: "blue",
+            borderRadius: "full",
+          },
+          {
+            label: "NextJS/Typescript",
+            colorScheme: "black",
             borderRadius: "full",
           },
           { label: "Render", colorScheme: "yellow", borderRadius: "full" },
@@ -295,11 +303,16 @@ const Experience = () => {
             colorScheme: "gray",
             borderRadius: "full",
           },
-          { label: "Prisma", colorScheme: "green", borderRadius: "full" },
+          { label: "Neon Postgres", colorScheme: "green", borderRadius: "full" },
           { label: "Swagger UI", colorScheme: "green", borderRadius: "full" },
           {
-            label: "Web Socket",
+            label: "Openai",
             colorScheme: "purple",
+            borderRadius: "full",
+          },
+          {
+            label: "Cloudflare, AbuseIPB",
+            colorScheme: "blue",
             borderRadius: "full",
           },
         ]}

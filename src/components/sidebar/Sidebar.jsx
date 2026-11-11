@@ -5,7 +5,7 @@ import { FiExternalLink, FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 import Socials from "../main-content/socials";
 import { Link as RouterLink } from "react-router-dom";
-import resume from "../../assets/Azeezat_Nasir_Resume.docx.pdf";
+import resume from "../../assets/Azeezat_Nasir_Resume.pdf";
 
 export function Sidebar() {
 
@@ -38,26 +38,26 @@ export function Sidebar() {
 
   const SidebarContent = () => (
 
-    
+
     <Flex direction="column" align="center" w="full">
       <Box
         borderRadius="full"
         p="2"
         mt="16px"
       >
-      <Box borderRadius="full" p="2" mt="16px">
-  <RouterLink to="/profile-image">
-    <Image
-      src={profilePicture}
-      alt="profile picture"
-      boxSize="164px"
-      borderRadius="full"
-      objectFit="cover"
-      objectPosition="top"
-      cursor="pointer"
-    />
-  </RouterLink>
-</Box>
+        <Box borderRadius="full" p="2" mt="16px">
+          <RouterLink to="/profile-image">
+            <Image
+              src={profilePicture}
+              alt="profile picture"
+              boxSize="164px"
+              borderRadius="full"
+              objectFit="cover"
+              objectPosition="top"
+              cursor="pointer"
+            />
+          </RouterLink>
+        </Box>
 
       </Box>
       <Box padding="4px 10px" mt="6px">
@@ -79,7 +79,7 @@ export function Sidebar() {
           Software Developer/Engineer
         </Text>
       </Box>
-  
+
       <Button
         as="a"
         href={resume}
@@ -100,10 +100,10 @@ export function Sidebar() {
       <NavButton to="experience">Experience</NavButton>
       <NavButton to="skills">Skills</NavButton>
       <NavButton to="getintouch">Get in Touch</NavButton>
-      <Socials/>
+      <Socials />
     </Flex>
   );
-  
+
 
   return (
     <Box
